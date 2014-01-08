@@ -10,7 +10,7 @@ module WickedPdfHelper
   end
 
   def wicked_pdf_stylesheet_link_tag(*sources)
-    css_dir = WickedPdfHelper.root_path.join('public', 'stylesheets')
+    css_dir = WickedPdfHelper.root_path.join('public')
     css_text = sources.collect { |source|
       source = WickedPdfHelper.add_extension(source, 'css')
       "<style type='text/css'>#{File.read(css_dir.join(source))}</style>"
